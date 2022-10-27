@@ -2,7 +2,7 @@ import React from 'react';
 import { Space, Typography, Image  } from 'antd';
 import logo from '../images/logo.png';
 import koala from '../images/koala.png'
-import possum from '../images/possum.png'
+import brushy from '../images/brushy.png'
 import wallaby from '../images/wallaby.png'
 import sugarglider from '../images/sugarglider.png'
 const { Title, Text } = Typography;
@@ -21,7 +21,7 @@ const Shop = () => (
   <Text>Price: $19.99</Text>
   <br/>
   <Text strong>Possum Toy</Text>
-  <Image height={300} width= {250} src={possum}/>
+  <Image height={300} width= {250} src={brushy}/>
   <Text>Price: $14.99</Text>
   <br/>
   <Text strong>Wallaby Toy</Text>

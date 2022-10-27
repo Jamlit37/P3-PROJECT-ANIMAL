@@ -24,7 +24,6 @@ const Ticket = () => (
   <Title level={5}>Please choose a date here</Title>
   <Text>Note: If fully booked, will display as blank date</Text>
   <DatePicker onChange={onChange} onOk={onOk} disabledDate={disabledDate}/>
-  
   </Space>
 );
 

@@ -15,12 +15,12 @@ import Ticket from './pages/Ticket';
 // import Confirmation from './pages/Confirmation';
 import Faq from './pages/Faq';
 import Info from './pages/Info';
-// import Visit  from './pages/Visit';
+import Visit  from './pages/Visit';
 import About from './pages/About';
 import Shop from './pages/Shop';
-// import Donate from './pages/Donate';
+import Donate from './pages/Donate';
 // import Layout from './components/Layout';
-import {HomeOutlined, InfoCircleOutlined, ShopOutlined } from '@ant-design/icons'
+import {HomeOutlined, InfoCircleOutlined, ShopOutlined, CarOutlined, DollarOutlined } from '@ant-design/icons'
 // import AppNavbar from './components/Navbar'
 
 const httpLink = createHttpLink({
@@ -59,7 +59,9 @@ function App() {
         items={[
           {label: "Home",key:"/",icon: <HomeOutlined />},
           {label: "About Us",key:"/about",icon: <InfoCircleOutlined />},
-          {label: "Shop here",key:"/shop",icon: <ShopOutlined />}
+          {label: "Shop here",key:"/shop",icon: <ShopOutlined />},
+          {label: "Visit",key:"/visit",icon: <CarOutlined />},
+          {label: "Donate",key:"/donate",icon: <DollarOutlined />}
 
 
         ]}
@@ -86,10 +88,10 @@ function App() {
             {/* <Route path="/confirmation" element={<Confirmation />}/> */}
             <Route path="/faq" element={<Faq />}/>
             <Route path="/info" element={<Info />}/>
-            {/* <Route path="/visit" element={<Visit />}/> */}
+            <Route path="/visit" element={<Visit />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/shop" element={<Shop />}/>
-            {/* <Route path="/donate" element={<Donate />}/>  */}
+            <Route path="/donate" element={<Donate />}/> 
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Routes>
         </>

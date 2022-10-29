@@ -1,6 +1,6 @@
 import React from 'react';
 import { DatePicker, Space, Typography, Image  } from 'antd';
-import logo from '../images/logo.png';
+import logo from '../images/animalia-logo.png';
 import moment from 'moment';
 
 const { Title, Text } = Typography;

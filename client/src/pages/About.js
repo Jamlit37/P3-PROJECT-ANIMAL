@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Space, Typography, Image  } from 'antd';
-import logo from '../images/logo.png';
+import logo from '../images/animalia-logo.png';
 import sugarglider from '../images/sugarglider.png'
 const { Title, Text } = Typography;
 const About = () => (

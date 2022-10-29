@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Space, Typography, Image  } from 'antd';
-import logo from '../images/logo.png';
+import logo from '../images/animalia-logo.png';
 import koala from '../images/koala.png'
 import wallaby from '../images/wallaby.png'
 import brushy from '../images/brushy.png'

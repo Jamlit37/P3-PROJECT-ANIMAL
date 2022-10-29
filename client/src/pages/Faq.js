@@ -1,6 +1,6 @@
 import React from 'react';
 import { Space, Typography, Image  } from 'antd';
-import logo from '../images/logo.png';
+import logo from '../images/animalia-logo.png';
 import { Collapse } from 'antd';
 const { Panel } = Collapse;
 const faq1 = `

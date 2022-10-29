@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Space, Typography, Image  } from 'antd';
-import logo from '../images/logo.png';
+import logo from '../images/animalia-logo.png';
 const { Title, Text } = Typography;
 
 

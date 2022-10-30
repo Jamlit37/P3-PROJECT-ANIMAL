@@ -9,16 +9,15 @@ const typeDefs = gql`
     }
     type Ticket {
       _id: ID
-      purchaseDate: String
+      title: String
       ticketId: String
-      products: [Product]!
+      products: [Product]
   }
     type Product {
     _id: ID
-    quantity: String
+    quantity: Float
     productId: String
-    price: String
-    purchasedAt: String
+    price: Float
   }
     type Query {
         me: User
@@ -28,7 +27,7 @@ const typeDefs = gql`
     user: User
     }
     input AddTicketInput {
-        purchaseDate: String
+        title: String
         ticketId: String
         products: String
     }, 
@@ -36,8 +35,7 @@ const typeDefs = gql`
         quantity: String
         productId: String
         price: String
-        purchasedAt: String
-    }, 
+        }, 
 
     type Mutation {
         login(email: String!, password: String!): Auth

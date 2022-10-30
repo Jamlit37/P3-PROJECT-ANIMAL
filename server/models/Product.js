@@ -1,26 +1,28 @@
 const mongoose = require('mongoose');
+const Ticket = require('./Ticket');
 
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
   price: {
-    type: String,
+    type: Number,
     required: true,
     min: 0.99
   },
   quantity: {
-    type: String,
+    type: Number,
     min: 0,
     default: 0
-  }, 
-  purchasedAt:  {
-    type: String,
-    required: true,
   },
   productId: {
     type: String,
     required: true,
-  }
+  }, 
+ tickets: [Ticket.schema] 
+
+
 });
 
-module.exports = productSchema;
+const Product = mongoose.model('Product', productSchema);
+
+module.exports = Product;

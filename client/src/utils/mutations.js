@@ -30,13 +30,12 @@ export const ADD_TICKET = gql`
       username
       email
       tickets {
-       ticketId
-       purchaseDate
+        _id
+       title
        products {
         quantity
-        productId
+        _id
         price
-        purchasedAt
        }
       }
     }
@@ -48,13 +47,12 @@ export const ADD_PRODUCT = gql`
       username
       email
       tickets {
-       ticketId
-       purchaseDate
+        _id
+       title
        products {
         quantity
-        productId
+        _id
         price
-        purchasedAt
        }
       }
     }
@@ -62,18 +60,17 @@ export const ADD_PRODUCT = gql`
 `;
 
 export const REMOVE_TICKET = gql`
-  mutation removeTicket($ticketId: String!) {
-    removeTicket(ticketId: $ticketId) {
+  mutation removeTicket($ticketId: [ID]!) {
+    removeTicket(ticket: $ticketId) {
       username
       email
       tickets {
-       ticketId
-       purchaseDate
+        _id
+       title
        products {
         quantity
-        productId
+        _id
         price
-        purchasedAt
        }
       }
     }
@@ -86,13 +83,12 @@ export const REMOVE_PRODUCT = gql`
       username
       email
       tickets {
-       ticketId
-       purchaseDate
+        _id
+       title
        products {
         quantity
-        productId
+        _id
         price
-        purchasedAt
        }
       }
     }

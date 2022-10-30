@@ -19,8 +19,10 @@ import Visit  from './pages/Visit';
 import About from './pages/About';
 import Shop from './pages/Shop';
 import Donate from './pages/Donate';
+import OrderHistory from './pages/OrderHistory';
+
 // import Layout from './components/Layout';
-import {HomeOutlined, InfoCircleOutlined, ShopOutlined, CarOutlined, DollarOutlined } from '@ant-design/icons'
+import { HomeOutlined ,InfoCircleOutlined, ShopOutlined, CarOutlined, DollarOutlined } from '@ant-design/icons'
 import AppNavbar from './components/Navbar'
 import AppNavbarLogin from './components/NavbarLogin'
 
@@ -53,21 +55,23 @@ function App() {
   <Layout className="layout">
     <Header>
       <div className="logo" />
-      <Menu
+      
+      <Menu style={{justifyContent: 'center'}}
+      
         onClick={({ key })=> {
           navigate(key);
         }}
+        
         items={[
           {label: "Home",key:"/",icon: <HomeOutlined />},
           {label: "About Us",key:"/about",icon: <InfoCircleOutlined />},
           {label: "Shop here",key:"/shop",icon: <ShopOutlined />},
           {label: "Visit",key:"/visit",icon: <CarOutlined />},
-          {label: "Donate",key:"/donate",icon: <DollarOutlined />}
-
-
+          {label: "Donate",key:"/donate",icon: <DollarOutlined />},
         ]}
         mode="horizontal"
     ></Menu>
+    
     </Header>
     <Content
       style={{
@@ -92,6 +96,10 @@ function App() {
             <Route path="/about" element={<About />}/>
             <Route path="/shop" element={<Shop />}/>
             <Route path="/donate" element={<Donate />}/> 
+            <Route 
+                path="/orderHistory" 
+                element={<OrderHistory />} 
+              />
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Routes>
         </>

@@ -3,9 +3,6 @@ import { Button, Space, Typography, Image  } from 'antd';
 import logo from '../images/animalia-logo.png';
 const { Title, Text } = Typography;
 
-
-
-
 const Home = () => (
   <Space direction="vertical">
   <Title> Welcome to Animalia Zoo <Image width= {200} src={logo}

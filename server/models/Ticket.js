@@ -1,25 +1,16 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
 
+const { Schema } = mongoose;
 
 const ticketSchema = new Schema({
-  purchaseDate: {
-    type: Date,
-    default: Date.now
+  title: {
+    type: String
   },
-  products: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Product'
-    }
-  ],
-
   ticketId: {
-    type: String,
-    required: true,
-  },
-
-
+    type: String
+  }
 });
 
-module.exports = ticketSchema;
-;
+const Ticket = mongoose.model('Ticket', ticketSchema);
+
+module.exports = Ticket;

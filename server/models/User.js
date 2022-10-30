@@ -1,7 +1,7 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
 const bcrypt = require('bcrypt');
-
-const ticketSchema = require('./Ticket');
+const Ticket = require('./Ticket');
 
 const userSchema = new Schema(
   {
@@ -20,7 +20,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    tickets: [ticketSchema]
+    tickets: [Ticket.schema]
   },
 
   {

@@ -6,13 +6,12 @@ export const GET_ME = gql`
       username
       email
       tickets {
-       ticketId
-       purchaseDate
+        _id
+       title
        products {
         quantity
-        productId
+        _id
         price
-        purchasedAt
        }
       }
     }

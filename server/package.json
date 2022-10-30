@@ -8,12 +8,14 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "test": "react-scripts test --env=jsdom",
+    "seed": "node config/seeds.js",
     "eject": "react-scripts eject"
     },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-core": "^3.6.2",
     "apollo-server-express": "^3.6.2",
     "bcrypt": "^5.0.0",
     "express": "^4.17.2",

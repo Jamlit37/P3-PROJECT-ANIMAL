@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Adult",
+    "ticketId": "1"
+  },
+  {
+    "title": "Child",
+    "ticketId": "2"
+  },
+  {
+    "title": "Concession",
+    "ticketId": "3"
+  },
+  {
+    "title": "Family",
+    "ticketId": "4"
+  }
+]

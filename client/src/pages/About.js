@@ -11,12 +11,11 @@ const About = () => (
   <Space direction="vertical">
    <Image width={'95vw'} height={50} src={banner} />
     <Image width={'60vw'} height={75} src={logobanner} style={{ justifyContent: 'center', marginLeft: '33%' }} />
-    <Image id="possumbanner" width={'95vw'} height={'500px'} src={possumbanner} />
-
   <Text strong> Thanks for visiting</Text>
   <Text>A volunteer based Zoo dedicated to fighting extinction of Australian Wildlife.</Text>
   <Text>Our zoos inspire animal lovers of all ages. And by strengthening the connection between people and wildlife, we hope to protect the future of animals and their homes.</Text>
   <Text>We're a not-for-profit organisation, so every dollar counts. Each time you visit one of our zoos, donate, buy a memento from our shops, or share what you've discovered, you're helping us to protect wildlife. So, thank you.</Text>
+  <Image id="possumbanner" width={'95vw'} height={'800px'} src={possumbanner} />
   <Image width={'95vw'} height={100} src={bannerflipped} />
   </Space>
   

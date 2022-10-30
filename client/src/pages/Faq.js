@@ -25,8 +25,7 @@ const Faq = () => (
   <Space direction="vertical">
   <Image width={'95vw'} height={50} src={banner} />
     <Image width={'60vw'} height={75} src={logobanner} style={{ justifyContent: 'center', marginLeft: '33%' }} />
-    <Image id="platybanner" width={'95vw'} height={'500px'} src={platybanner} />
-
+ 
   <Title level={3} >Frequently asked questions</Title>
   <Text strong> We are experiencing a high volume of calls and emails at the moment so the phone wait time and email response time may be lengthy so please read our FAQs below.</Text>
   <Collapse onChange={onChange}>
@@ -40,6 +39,7 @@ const Faq = () => (
         <p>{faq3}</p>
       </Panel>
     </Collapse>
+    <Image id="platybanner" width={'95vw'} height={'500px'} src={platybanner} />
     <Image width={'95vw'} height={100} src={bannerflipped} />
   </Space>
   );

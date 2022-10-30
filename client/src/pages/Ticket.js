@@ -26,7 +26,7 @@ const Ticket = () => {
       {Auth.loggedIn() ? (<Space direction="vertical" size={12}>
       <Image width={'95vw'} height={50} src={banner} />
     <Image width={'60vw'} height={75} src={logobanner} style={{ justifyContent: 'center', marginLeft: '33%' }} />
-    <Image id="treekoalabanner" width={'95vw'} height={'500px'} src={treekoalabanner} />
+    <Image id="treekoalabanner" width={'95vw'} height={'520px'} src={treekoalabanner} />
   <br/>
   <Title level={5}>Please choose a date here</Title>
   <Text>Note: If fully booked, will display as blank date</Text>

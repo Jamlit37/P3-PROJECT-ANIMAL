@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Nav, Tab } from 'react-bootstrap';
-import SignUpForm from './SignupForm';
+import LoginForm from './LoginForm';
 import { Button, Modal } from 'antd';
 import Auth from '../utils/auth';
 
-const AppNavbar = () => {
+const AppNavbarLogin = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -19,26 +19,29 @@ const AppNavbar = () => {
     <>
       {Auth.loggedIn() ? (
         <>
+          <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
         </>
       ) : (
         <Button type="primary" onClick={showModal}>
-          Signup
+          Login
         </Button>
       )
       }
-    <div>
-      <p>
-        <Modal id="signup" title="signup" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
-          <Tab.Pane eventKey='signup'>
-            <SignUpForm handleModalClose={() => setIsModalOpen(false)} />
-          </Tab.Pane>
-        </Modal>
-      </p>
-    </div>
+      <div>
+        <p>
+
+          <Modal id="login" title="login" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Nav.Link eventKey='login'>Sign Up</Nav.Link>
+            <Tab.Pane eventKey='login'>
+              <LoginForm handleModalClose={() => setIsModalOpen(false)} />
+            </Tab.Pane>
+          </Modal>
+        </p>
+      </div>
     </>
+
   )
 };
 
 
-export default AppNavbar;
+export default AppNavbarLogin;

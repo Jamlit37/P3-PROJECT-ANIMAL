@@ -21,7 +21,8 @@ import Shop from './pages/Shop';
 import Donate from './pages/Donate';
 // import Layout from './components/Layout';
 import {HomeOutlined, InfoCircleOutlined, ShopOutlined, CarOutlined, DollarOutlined } from '@ant-design/icons'
-// import AppNavbar from './components/Navbar'
+import AppNavbar from './components/Navbar'
+import AppNavbarLogin from './components/NavbarLogin'
 
 const httpLink = createHttpLink({
   uri: '/graphql'
@@ -68,7 +69,6 @@ function App() {
         mode="horizontal"
     ></Menu>
     </Header>
-    {/* <AppNavbar/> */}
     <Content
       style={{
         padding: '0 50px',
@@ -96,6 +96,8 @@ function App() {
           </Routes>
         </>
     </Content>
+    <AppNavbar/>
+    <AppNavbarLogin/>
     <Footer
       style={{
         textAlign: 'center',

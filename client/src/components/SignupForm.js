@@ -9,7 +9,7 @@ import { ADD_USER } from '../utils/mutations';
 const SignupForm = () => {
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState;
+  const [showAlert, setShowAlert] = useState('');
   const [createUser] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {

@@ -2,6 +2,7 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+
 h1,
 h2,
 h3,
@@ -18,6 +19,11 @@ h6 {
 
 .ant-layout-content {
   background: white;
+}
+
+.ant-menu {
+ background: white;
+ width: 100vw;
 }
 
 .ant-layout-footer {

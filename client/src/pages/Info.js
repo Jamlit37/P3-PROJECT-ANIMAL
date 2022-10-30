@@ -15,11 +15,10 @@ const Info = () => (
   /></Title>
   <Title level={3} >Opening hours 9am-5pm everyday!</Title>
 
-  <Title level={4}>Koalas</Title><Image height={300} width= {250} src={koala}
-  /><Text strong>The koala or, inaccurately, koala bear is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae and its closest living relatives are the wombats.</Text>
+  <Title level={4}>Koalas</Title><Text strong><Image height={300} width= {250} src={koala}
+  />The koala or, inaccurately, koala bear is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae and its closest living relatives are the wombats.</Text>
   <br/>
-<Title level={4}>Wallabies</Title><Image height={300} width= {250} src={wallaby}
-  /><Text strong>Wallabies are members of the kangaroo clan found primarily in Australia and on nearby islands. There are many wallaby species, grouped roughly by habitat: shrub wallabies, brush wallabies, and rock wallabies. Hare wallabies are named for their size and their hare-like behavior.</Text>
+<Title level={4}>Wallabies</Title><Text strong>Wallabies are members of the kangaroo clan found primarily in Australia and on nearby islands. There are many wallaby species, grouped roughly by habitat: shrub wallabies, brush wallabies, and rock wallabies. Hare wallabies are named for their size and their hare-like behavior.</Text>
   <br/>
   <Title level={4}>Brush Tail Possums</Title><Image height={300} width= {250} src={brushy}
   /><Text strong>The common brushtail possum is a nocturnal, semiarboreal marsupial of the family Phalangeridae, native to Australia and naturalised in New Zealand, and the second-largest of the possums. Like most possums, the common brushtail possum is nocturnal.</Text>

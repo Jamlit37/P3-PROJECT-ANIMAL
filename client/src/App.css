@@ -1,1 +1,25 @@
 @import 'antd/dist/antd.css';
+
+.ant-layout-header {
+  background: #fff;
+  padding-top: 20px;
+}
+
+.ant-menu-horizontal {
+  line-height: 46px;
+  border: 0;
+  border-bottom: 1px solid #fff;
+
+}
+
+.ant-btn {
+  background: green;
+  color: #fff;
+}
+
+
+::selection {
+  color: #fff;
+  background: green;
+}
+

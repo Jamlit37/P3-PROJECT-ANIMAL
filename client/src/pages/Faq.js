@@ -1,7 +1,10 @@
 import React from 'react';
 import { Space, Typography, Image  } from 'antd';
-import logo from '../images/animalia-logo.png';
 import { Collapse } from 'antd';
+import banner from '../images/banner.png';
+import platybanner from '../images/platybanner.png';
+import logobanner from '../images/logobanner.png';
+import bannerflipped from '../images/bannerflipped.png';
 const { Panel } = Collapse;
 const faq1 = `
   All tickets must be pre booked online as space is limited in the busy periods
@@ -17,10 +20,13 @@ const onChange = (key) => {
   console.log(key);
 };
 
+
 const Faq = () => (
   <Space direction="vertical">
-  <Title> Welcome to Animalia Zoo <Image width= {200} src={logo}
-  /></Title>
+  <Image width={'95vw'} height={50} src={banner} />
+    <Image width={'60vw'} height={75} src={logobanner} style={{ justifyContent: 'center', marginLeft: '33%' }} />
+    <Image id="platybanner" width={'95vw'} height={'500px'} src={platybanner} />
+
   <Title level={3} >Frequently asked questions</Title>
   <Text strong> We are experiencing a high volume of calls and emails at the moment so the phone wait time and email response time may be lengthy so please read our FAQs below.</Text>
   <Collapse onChange={onChange}>
@@ -34,6 +40,7 @@ const Faq = () => (
         <p>{faq3}</p>
       </Panel>
     </Collapse>
+    <Image width={'95vw'} height={100} src={bannerflipped} />
   </Space>
   );
 export default Faq;

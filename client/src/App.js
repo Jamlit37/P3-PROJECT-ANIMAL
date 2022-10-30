@@ -22,7 +22,7 @@ import Donate from './pages/Donate';
 import OrderHistory from './pages/OrderHistory';
 
 // import Layout from './components/Layout';
-import { HomeOutlined ,InfoCircleOutlined, ShopOutlined, CarOutlined, DollarOutlined } from '@ant-design/icons'
+import { HomeOutlined ,InfoCircleOutlined, ShopOutlined, CarOutlined } from '@ant-design/icons'
 import AppNavbar from './components/Navbar'
 import AppNavbarLogin from './components/NavbarLogin'
 
@@ -55,7 +55,6 @@ function App() {
   <Layout className="layout">
     <Header>
       <div className="logo" />
-      
       <Menu style={{justifyContent: 'center'}}
       
         onClick={({ key })=> {
@@ -67,7 +66,7 @@ function App() {
           {label: "About Us",key:"/about",icon: <InfoCircleOutlined />},
           {label: "Shop here",key:"/shop",icon: <ShopOutlined />},
           {label: "Visit",key:"/visit",icon: <CarOutlined />},
-          {label: "Donate",key:"/donate",icon: <DollarOutlined />},
+    
         ]}
         mode="horizontal"
     ></Menu>

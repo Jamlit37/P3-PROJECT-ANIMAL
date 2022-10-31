@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { DatePicker, Space, Typography, Image, Button } from 'antd';
+import React, { useState } from 'react';
+import { DatePicker, Space, Typography, Image } from 'antd';
 import moment from 'moment';
 import Auth from '../utils/auth';
 import banner from '../images/banner.png';
 import treekoalabanner from '../images/treekoalabanner.png';
 import logobanner from '../images/logobanner.png';
 import bannerflipped from '../images/bannerflipped.png';
-import { ADD_TICKET } from '../utils/mutations'
-import { getAddTicketIds } from '../utils/localStorage';
-import { useMutation } from '@apollo/client'
 
 const { Title, Text } = Typography;
 
@@ -26,11 +23,6 @@ const disabledDate = (current) => {
 
 
 const Ticket = () => {
-  const [addTicketIds] = useState(getAddTicketIds());
-  const [addTicket] = useMutation(ADD_TICKET)
-  useEffect(() => {
-    return () => addTicketIds(addTicketIds);
-  });
   return (
     <div>
       {Auth.loggedIn() ? (<Space direction="vertical" size={12}>
@@ -41,12 +33,9 @@ const Ticket = () => {
         <Title level={5}>Please choose a date here</Title>
         <Text>Note: If fully booked, will display as blank date</Text>
         <DatePicker onChange={onChange} onOk={onOk} disabledDate={disabledDate} />
-        <Button
-          className='btn-block btn-info'
-          onClick={() => addTicket}>hello
-        </Button>
+        <Click />
         <Image width={'95vw'} height={100} src={bannerflipped} />
-       
+
       </Space>
       ) : (
         <div> Please Login </div>
@@ -55,6 +44,35 @@ const Ticket = () => {
       }
     </div>
   )
+}
+
+
+function Click() {
+  // State to store count value
+  const [count, setCount] = useState(0);
+  const [prevCount, setPrevCount] = useState(0);
+
+  // Function to increment count by 1
+  const incrementCount = () => {
+
+      setPrevCount(count);
+      if(count === 0) setCount(1);
+      setTimeout(() => {        
+        if(count - prevCount === 1) {
+          setCount(prev => prev + 1);
+        }
+      }, 1000);
+      
+      
+  };
+
+  return (
+    <div className="clicker">
+      <button  onClick={incrementCount}>1 x Ticket</button>
+      <br/>
+      <span>You are purchasing: </span>{count}<span> tickets.</span>
+    </div>
+  );
 }
 
 

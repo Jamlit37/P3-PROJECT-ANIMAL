@@ -17,10 +17,13 @@ npm start
 ```
 
 ## Live application link
-You can view the live application at: 
+You can view the live application at: https://animalia-zoo.herokuapp.com/
  
 ## GitHub
-To visit our GitHub repository visit: https://animalia-zoo.herokuapp.com/
+To visit our GitHub repository visit: https://github.com/Jamlit37/P3-PROJECT-ANIMAL/
+
+## Profile
+Visit my profile: https://james-little-portfolio.herokuapp.com/
 
 ## Contributors
 

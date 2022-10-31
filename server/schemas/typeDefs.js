@@ -11,13 +11,7 @@ const typeDefs = gql`
       _id: ID
       title: String
       ticketId: String
-      products: [Product]
-  }
-    type Product {
-    _id: ID
-    quantity: Float
-    productId: String
-    price: Float
+     
   }
     type Query {
         me: User
@@ -29,21 +23,13 @@ const typeDefs = gql`
     input AddTicketInput {
         title: String
         ticketId: String
-        products: String
     }, 
-    input AddProductInput {
-        quantity: String
-        productId: String
-        price: String
-        }, 
 
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addTicket(ticket: AddTicketInput): User
-        addProduct(product: AddProductInput): User
         removeTicket(ticketId: String!): User
-        removeProduct(productId: String!): User
 
 }
 `;

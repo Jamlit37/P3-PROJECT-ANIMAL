@@ -31,7 +31,7 @@ const AppNavbarLogin = () => {
         <p>
 
           <Modal id="login" title="login" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <Nav.Link eventKey='login'>Sign Up</Nav.Link>
+            <Nav.Link eventKey='login'>Login</Nav.Link>
             <Tab.Pane eventKey='login'>
               <LoginForm handleModalClose={() => setIsModalOpen(false)} />
             </Tab.Pane>

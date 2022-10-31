@@ -8,11 +8,6 @@ export const GET_ME = gql`
       tickets {
         _id
        title
-       products {
-        quantity
-        _id
-        price
-       }
       }
     }
   }

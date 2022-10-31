@@ -20,7 +20,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    tickets: [Ticket.schema]
+    tickets: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Tickets',
+      },
+    ],
   },
 
   {

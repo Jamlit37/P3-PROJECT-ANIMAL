@@ -43,23 +43,7 @@ const resolvers = {
             }
         },
 
-        addProduct: async (parent, { ticketId, quantity }, context) => {
-            if (context.user) {
-                return Ticket.findOneAndUpdate(
-                    { _id: ticketId },
-                    {
-                        $addToSet: {
-                            products: { quantity, price },
-                        },
-                    },
-                    {
-                        new: true,
-                        runValidators: true,
-                    }
-                );
-            }
-            throw new AuthenticationError('You need to be logged in!');
-        },
+       
 
 
         removeTicket: async (parent, { ticketId }, context) => {
@@ -73,23 +57,6 @@ const resolvers = {
             }
         },
 
-        removeProduct: async (parent, { ticketId, productId }, context) => {
-            if (context.user) {
-                return Ticket.findOneAndUpdate(
-                    { _id: ticketId },
-                    {
-                        $pull: {
-                            products: {
-                                _id: productId,
-                                price,
-                            },
-                        },
-                    },
-                    { new: true }
-                );
-            }
-            throw new AuthenticationError('You need to be logged in!');
-        },
     },
 
 

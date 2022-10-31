@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
 
+
 function OrderHistory() {
   const { data } = useQuery(GET_ME);
   let user;
@@ -28,13 +29,11 @@ function OrderHistory() {
                   {new Date(parseInt(ticket.title)).toLocaleDateString()}
                 </h3>
                 <div className="flex-row">
-                  {ticket.products.map(({  price, quantity }, index) => (
+                  {ticket.title.map(({  title }, index) => (
                     <div key={index} className="card px-1 py-1">
   
                       <div>
-                        <span>${price}</span>
-
-                        <span>${quantity}</span>
+                        <span>${title}</span>
                       </div>
                     </div>
                   ))}

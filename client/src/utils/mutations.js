@@ -32,28 +32,6 @@ export const ADD_TICKET = gql`
       tickets {
         _id
        title
-       products {
-        quantity
-        _id
-        price
-       }
-      }
-    }
-  }
-`;
-export const ADD_PRODUCT = gql`
-  mutation addProduct($product: AddProductInput!) {
-    addProduct(product: $product) {
-      username
-      email
-      tickets {
-        _id
-       title
-       products {
-        quantity
-        _id
-        price
-       }
       }
     }
   }
@@ -67,30 +45,8 @@ export const REMOVE_TICKET = gql`
       tickets {
         _id
        title
-       products {
-        quantity
-        _id
-        price
-       }
       }
     }
   }
 `;
 
-export const REMOVE_PRODUCT = gql`
-  mutation removeProduct($productId: String!) {
-    removeProduct(productId: $productId) {
-      username
-      email
-      tickets {
-        _id
-       title
-       products {
-        quantity
-        _id
-        price
-       }
-      }
-    }
-  }
-`;

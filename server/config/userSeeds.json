@@ -3,16 +3,12 @@
     "username": "Pamela123",
     "email": "pamela@testmail.com",
     "password": "password12345"
+   
   },
 
  {
     "username": "Elijah123",
     "email": "eholt@testmail.com",
-    "password": "password12345",
-    "ticket": [
-      {
-        "products": ["products[0]._id"]
-      }
-    ]
-  }
+    "password": "password12345"
+}
 ]

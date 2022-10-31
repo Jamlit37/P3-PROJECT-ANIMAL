@@ -15,7 +15,8 @@ Then to populate seed data and run it the application you can use
 npm run seed
 npm start
 ```
-
+## Issues
+All pages working on localhost but getting error "info:1 Refused to load the image 'data:image/png;base64,.....' because it violates the following Content Security Policy directive: "default-src 'none'". Note that 'img-src' was not explicitly set, so 'default-src' is used as a fallback."  As well as H10 code error on heroku portfolio page after working for like 10 seconds. No functionality in shopping area or ticket area. 
 ## Live application link
 You can view the live application at: https://animalia-zoo.herokuapp.com/
  

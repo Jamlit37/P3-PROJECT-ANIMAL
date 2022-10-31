@@ -34,6 +34,7 @@ const Ticket = () => {
         <Text>Note: If fully booked, will display as blank date</Text>
         <DatePicker onChange={onChange} onOk={onOk} disabledDate={disabledDate} />
         <Click />
+        <Checkout />
         <Image width={'95vw'} height={100} src={bannerflipped} />
 
       </Space>
@@ -55,26 +56,39 @@ function Click() {
   // Function to increment count by 1
   const incrementCount = () => {
 
-      setPrevCount(count);
-      if(count === 0) setCount(1);
-      setTimeout(() => {        
-        if(count - prevCount === 1) {
-          setCount(prev => prev + 1);
-        }
-      }, 1000);
-      
-      
+    setPrevCount(count);
+    if (count === 0) setCount(1);
+    setTimeout(() => {
+      if (count - prevCount === 1) {
+        setCount(prev => prev + 1);
+      }
+    }, 1000);
+
+
   };
 
   return (
     <div className="clicker">
-      <button  onClick={incrementCount}>1 x Ticket</button>
-      <br/>
+      <button onClick={incrementCount}>1 x Ticket</button>
+      <br />
       <span>You are purchasing: </span>{count}<span> tickets.</span>
     </div>
   );
 }
 
+function Checkout() {
+  return <form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+  <input type="hidden" name="business" value="herschelgomez@xyzzyu.com"/>
+    <input type="hidden" name="cmd" value="_xclick"/> 
+    <input type="hidden" name="item_name" value="Hot Sauce-12oz. Bottle"/> 
+    <input type="hidden" name="amount" value="5.95"/> 
+    <input type="hidden" name="currency_code" value="USD"/> 
+    <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="Buy Now"/> 
+    <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" /> 
+    </form>
+
+}
 
 
-export default Ticket;
+
+    export default Ticket;

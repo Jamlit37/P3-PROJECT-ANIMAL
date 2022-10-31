@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Space, Image } from 'antd';
+import {  Space, Image } from 'antd';
 import hourbanner from '../images/openinghourb.png';
 import footerbanner from '../images/footerb.png';
 import banner from '../images/banner.png';
@@ -7,7 +7,7 @@ import banner3 from '../images/banner3.png';
 
 import bannerflipped from '../images/bannerflipped.png';
 import logobanner from '../images/logobanner.png';
-import { QuestionCircleOutlined, DollarOutlined, QqOutlined, CalendarOutlined  } from '@ant-design/icons';
+
 import { Typography } from 'antd';
 
 const { Title } = Typography;
@@ -25,7 +25,6 @@ const Home = () => (
 <Image id="banner3" width={'95vw'} height={'250px'} src={banner3} />
 <br/>
 
-    <Buttons />
     <br/>
 
     <Image id="kangabanner" width={'95vw'} height={'800px'} src={footerbanner} />
@@ -35,13 +34,5 @@ const Home = () => (
 
 );
 
-function Buttons() {
-  return <><Button className='trio' style={{  width: '33%', padding: '50px 20px' }} shape="round" href="/info" icon={<QqOutlined />}> Animals </Button>
-    <Button className='trio' shape="round" style={{  width: '33%', padding: '50px 20px', paddingTop: '100px'}} href="/faq" icon={<QuestionCircleOutlined />}> FAQ </Button>
-    <Button className='trio'  shape="round" style={{  width: '34%', padding: '50px 20px' }}  href="/donate" icon={<DollarOutlined />}> Donate </Button>
-    <br/>
-    <br/>
-    <Button block style={{ padding: '50px 20px' }} shape="round" href="/ticket" icon={<CalendarOutlined />}> Tickets </Button>
-  </>
-}
+
 export default Home;

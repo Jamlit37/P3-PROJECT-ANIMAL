@@ -58,8 +58,10 @@ function App() {
               { label: "Home", key: "/", icon: <HomeOutlined /> },
               { label: "About Us", key: "/about", icon: <InfoCircleOutlined /> },
               { label: "Shop here", key: "/shop", icon: <ShopOutlined /> },
-              { label: "Visit", key: "/visit", icon: <CarOutlined /> },
-
+              { label: "Visit", key: "/visit", icon: <CarOutlined /> }, { label: "Ticket", key: "/ticket", icon: <CarOutlined /> },
+              { label: "info", key: "/info", icon: <CarOutlined /> },
+              { label: "Faq", key: "/faq", icon: <CarOutlined /> },
+              { label: "donate", key: "/donate", icon: <CarOutlined /> }
             ]}
             mode="horizontal"
           >  </Menu>
